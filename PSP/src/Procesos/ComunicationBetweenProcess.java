@@ -1,4 +1,4 @@
-package pruebasClase;
+package Procesos;
 
 import java.io.BufferedReader;
 import java.io.IOException;

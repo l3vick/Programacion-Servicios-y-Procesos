@@ -1,4 +1,4 @@
-package pruebasClase;
+package Procesos;
 
 import java.io.IOException;
 import java.util.Arrays;
