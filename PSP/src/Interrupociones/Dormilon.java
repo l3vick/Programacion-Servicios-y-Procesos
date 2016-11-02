@@ -34,8 +34,6 @@ public class Dormilon extends Thread {
 		System.out.println("La mamá acueta al niño");
 		Thread nene = new Dormilon("Pablo Jr",siesta);
 		nene.start();
-		
-		
 	
 		try {
 			Thread.sleep(despertador);
