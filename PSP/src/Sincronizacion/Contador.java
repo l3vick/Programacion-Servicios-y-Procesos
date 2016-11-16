@@ -1,20 +1,30 @@
 package Sincronizacion;
 
 class Contador {
-	volatile public static int c;
+	static int contador;
+
+	public synchronized static void sumar() {
+		for (int i = 0; i < 1000; i++)
+			contador++;
+
+	}
+
+	public synchronized static void restar() {
+		for (int i = 0; i < 1000; i++)
+			contador--;
+
+	}
+
 }
 
 class Suma extends Thread {
 	public void run() {
-		for (int i = 0; i < 1000; i++)
-			Contador.c++;
+		Contador.sumar();
 	}
 }
 
 class Resta extends Thread {
-	public void run() {
-		for (int i = 0; i < 1000; i++)
-			Contador.c--;
+	public synchronized void run() {
+		Contador.restar();
 	}
 }
-
